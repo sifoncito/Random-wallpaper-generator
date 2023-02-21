@@ -2,7 +2,7 @@ from PIL import Image
 import random
 import boto3
 
-s3 = boto3.cleint('s3')
+s3 = boto3.client('s3')
 bucket = 'mys3bucketforwallpapers'
 
 
