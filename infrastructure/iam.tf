@@ -32,7 +32,7 @@ resource "aws_iam_policy" "policy_for_lambda" {
           "s3:PutObject"
         ]
         Effect   = "Allow"
-        Resource = "*"
+        Resource = "${aws_s3_bucket.bucket_cloudfront.arn}"
       },
     ]
   })
@@ -70,7 +70,7 @@ resource "aws_iam_policy" "policy_for_eventbridge" {
           "lambda:InvokeFunction"
         ]
         Effect   = "Allow"
-        Resource = "*"
+        Resource = "${aws_lambda_function.random_wallpaper_function.arn}"
       },
     ]
   })
