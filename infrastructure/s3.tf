@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket_cloudfront" {
-  bucket = "mys3bucketforwallpapers"
+  bucket = var.s3_bucket_name
 
   tags = {
     name = "Bucket for cloudfront"
