@@ -20,9 +20,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
         forward = "none"
       }
     }
-    viewer_protocol_policy = "allow-all"
+    viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
-    default_ttl            = 3600
+    default_ttl            = 86000
     max_ttl                = 86400
 
   }
